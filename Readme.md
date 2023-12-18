@@ -69,4 +69,76 @@ console applications are the simplest
 
  can use suffixes to show type of a literal; 
 
- 
+ ```
+
+//int i5 = d1; 
+int i5 = static_cast<int>(d1); 
+ // <> used around the type we want to cast to
+ // () around the value you want to cast 
+
+ ```
+
+ * suppress the warning of any lost data by putting in the explicit cast
+
+
+ # summary 
+
+ - variables have a type and must be declared before they're used
+
+ - different types hold different kinds of data 
+
+    * have different lengths and maximum values 
+    * compiler knows all the rules and will help you with warning and errors
+
+- be aware that overflow can happen silently; ()
+  * avoid using very small types l9ike char for numbers
+
+* to tell compiler you know what you're doing, use a safe cast 
+ - when you want to go back and forth between different types, tell the compiler you're doing it on purpose and the warnings will be suppressed
+
+ # language basics - user defined types
+
+ - building an app- 
+  - you can make the compiler a promise; 
+  - linker will ensure it is kept . makes the ocnnection between the code that uses the class, and the code that implements it
+
+  - #include only a convenience 
+   - pastes another file into source file 
+  - generally called header file .h
+
+  - put each class in its own file 
+
+# classes and objects
+
+syntax for declaring
+
+class keyword;
+
+has public and private sections; 
+  - by default they will be private 
+  - good practice not to have public 
+
+declare like fundamental types; 
+(e.g. Person p)  
+- access these member with . operator
+
+e.g. 
+
+```
+class Person {
+  private:
+    std::string firstname;
+    std::string lastname; 
+    int phoneNumber; 
+
+  public:
+    std::string getName();
+    };
+
+    ```
+
+    - keyword class introduces the declaration
+    - brace brackets surround the contents
+    - member variables are generally private 
+
+  
